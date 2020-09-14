@@ -6,30 +6,29 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-            int i, k, j;
-            Console.WriteLine("Enter the length of the longest wanted starline:");
-            int num = int.Parse(Console.ReadLine());
-
-            for(i = 1; i<=num; num--)
+            int num, i, j, k;
+            Console.Write("enter the level:");
+            num = int.Parse(Console.ReadLine());
+            for (i = 1; i <= num; i++)
             {
-                if(num % 2 != 0)
+                if (i % 2 != 0)
                 {
-                    for(j=1; j<num; j++)
+                    for (j = 1; j < num - i + 1; j++)
                     {
                         Console.Write(" ");
                     }
-                    for(k=1; k<=num-i+1; k++)
+                    for (k = 1; k <= i; k++)
                     {
-                        Console.Write("* ");
+
+                        Console.Write("*");
+                        Console.Write(" ");
                     }
                     Console.WriteLine();
                 }
+
+
+
             }
-
-                
-                
-
-            
         }
     }
 }
